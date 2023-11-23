@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang = "en-US" scroll="no" style="overflow: hidden">
+<head>
+<title>DATE & TIME</title>
+</head>
+<a>
+<p>
+<b>
+<script type="text/javascript">
+
+document.body.style.fontFamily = "Calibri"
+
+var minimalDisplay = 0 // MINIMAL DISPLAY (DISABLES CUSTOM DAY LABELS) 0 = DISABLED 1 = ENABLED
+if(minimalDisplay == 1){
+var mdAlignment = 1 // MINIMAL DISPLAY ALIGNMENT 0 = LEFT, 1 = RIGHT
+if(mdAlignment == 0){
+document.body.style.textAlign = "left"
+}
+if(mdAlignment == 1){
+document.body.style.textAlign = "right"
+}
+document.body.style.fontSize = "35px"
+} else {
+document.body.style.textAlign = "center"
+document.body.style.fontSize = "100px"
+}
+
+var time = new Date();
+
+var hours = time.getHours();
+var minutes = time.getMinutes();
+var seconds = time.getSeconds();
+
+hours = hours + 0 // RELATIVE HOUR INTEGER VARIABLE OVERRIDE
+hours = hours // CONSTANT HOUR INTEGER VARIABLE OVERRIDE
+
+var dHours
+var dMins
+var dSecs
+
+var date = time.getDate();
+var month = time.getMonth();
+var year = time.getFullYear();
+
+date = date + 0 // RELATIVE DATE INTEGER VARIABLE OVERRIDE
+date = date // CONSTANT DATE INTEGER VARIABLE OVERRIDE
+
+month = month + 0 // RELATIVE MONTH VARIABLE OVERRIDE
+month = month // CONSTANT MONTH VARIABLE OVERRIDE
+// MONTH RANGE = VALUES 0-11
+
+var dDate
+var dMonth
+var dYear = year
+
+if(date < 10){dDate = "0" + date} else {dDate = date}
+if(hours < 10){dHours = "0" + hours} else {dHours = hours}
+if(minutes < 10){dMins = "0" + minutes} else {dMins = minutes}
+if(seconds < 10){dSecs = ":" + "0" + seconds} else {dSecs = ":" + seconds}
+
+var btSecs
+if(seconds == 0){btSecs = 0}
+if(seconds == 1){btSecs = 1}
+if(seconds == 2){btSecs = 2}
+if(seconds == 3){btSecs = 3}
+if(seconds == 4){btSecs = 4}
+if(seconds == 5){btSecs = 5}
+if(seconds == 6){btSecs = 6}
+if(seconds == 7){btSecs = 7}
+if(seconds == 8){btSecs = 8}
+if(seconds == 9){btSecs = 9}
+if(seconds == 10){btSecs = 0}
+if(seconds == 11){btSecs = 1}
+if(seconds == 12){btSecs = 2}
+if(seconds == 13){btSecs = 3}
+if(seconds == 14){btSecs = 4}
+if(seconds == 15){btSecs = 5}
+if(seconds == 16){btSecs = 6}
+if(seconds == 17){btSecs = 7}
+if(seconds == 18){btSecs = 8}
+if(seconds == 19){btSecs = 9}
+if(seconds == 20){btSecs = 0}
+if(seconds == 21){btSecs = 1}
+if(seconds == 22){btSecs = 2}
+if(seconds == 23){btSecs = 3}
+if(seconds == 24){btSecs = 4}
+if(seconds == 25){btSecs = 5}
+if(seconds == 26){btSecs = 6}
+if(seconds == 27){btSecs = 7}
+if(seconds == 28){btSecs = 8}
+if(seconds == 29){btSecs = 9}
+if(seconds == 30){btSecs = 0}
+if(seconds == 31){btSecs = 1}
+if(seconds == 32){btSecs = 2}
+if(seconds == 33){btSecs = 3}
+if(seconds == 34){btSecs = 4}
+if(seconds == 35){btSecs = 5}
+if(seconds == 36){btSecs = 6}
+if(seconds == 37){btSecs = 7}
+if(seconds == 38){btSecs = 8}
+if(seconds == 39){btSecs = 9}
+if(seconds == 40){btSecs = 0}
+if(seconds == 41){btSecs = 1}
+if(seconds == 42){btSecs = 2}
+if(seconds == 43){btSecs = 3}
+if(seconds == 44){btSecs = 4}
+if(seconds == 45){btSecs = 5}
+if(seconds == 46){btSecs = 6}
+if(seconds == 47){btSecs = 7}
+if(seconds == 48){btSecs = 8}
+if(seconds == 49){btSecs = 9}
+if(seconds == 50){btSecs = 0}
+if(seconds == 51){btSecs = 1}
+if(seconds == 52){btSecs = 2}
+if(seconds == 53){btSecs = 3}
+if(seconds == 54){btSecs = 4}
+if(seconds == 55){btSecs = 5}
+if(seconds == 56){btSecs = 6}
+if(seconds == 57){btSecs = 7}
+if(seconds == 58){btSecs = 8}
+if(seconds == 59){btSecs = 9}
+
+var ampm
+if(hours == 0){apHours = 12, ampm = "AM"}
+if(hours == 1){apHours = 1, ampm = "AM"}
+if(hours == 2){apHours = 2, ampm = "AM"}
+if(hours == 3){apHours = 3, ampm = "AM"}
+if(hours == 4){apHours = 4, ampm = "AM"}
+if(hours == 5){apHours = 5, ampm = "AM"}
+if(hours == 6){apHours = 6, ampm = "AM"}
+if(hours == 7){apHours = 7, ampm = "AM"}
+if(hours == 8){apHours = 8, ampm = "AM"}
+if(hours == 9){apHours = 9, ampm = "AM"}
+if(hours == 10){apHours = 10, ampm = "AM"}
+if(hours == 11){apHours = 11, ampm = "AM"}
+if(hours == 12){apHours = 12, ampm = "PM"}
+if(hours == 13){apHours = 1, ampm = "PM"}
+if(hours == 14){apHours = 2, ampm = "PM"}
+if(hours == 15){apHours = 3, ampm = "PM"}
+if(hours == 16){apHours = 4, ampm = "PM"}
+if(hours == 17){apHours = 5, ampm = "PM"}
+if(hours == 18){apHours = 6, ampm = "PM"}
+if(hours == 19){apHours = 7, ampm = "PM"}
+if(hours == 20){apHours = 8, ampm = "PM"}
+if(hours == 21){apHours = 9, ampm = "PM"}
+if(hours == 22){apHours = 10, ampm = "PM"}
+if(hours == 23){apHours = 11, ampm = "PM"}
+
+if(month == 0){dMonth = "JAN"}
+if(month == 1){dMonth = "FEB"}
+if(month == 2){dMonth = "MAR"}
+if(month == 3){dMonth = "APR"}
+if(month == 4){dMonth = "MAY"}
+if(month == 5){dMonth = "JUN"}
+if(month == 6){dMonth = "JUL"}
+if(month == 7){dMonth = "AUG"}
+if(month == 8){dMonth = "SEP"}
+if(month == 9){dMonth = "OCT"}
+if(month == 10){dMonth = "NOV"}
+if(month == 11){dMonth = "DEC"}
+
+var day = time.getDay();
+var dDay
+var tDay
+var tcMonth = month + 1
+
+var weekday = "WEEKDAY"
+var weekend = "WEEKEND"
+
+var school = 0 // SCHOOL IN PROGRESS VARIABLE
+if(school == 1){
+weekday = "SCHOOL DAY"
+weekend = "WEEKEND"
+}
+
+if(day == 0){dDay = "SUNDAY", tDay = /*weekend*/""}
+if(day == 1){dDay = "MONDAY", tDay = /*weekday*/""}
+if(day == 2){dDay = "TUESDAY", tDay = /*weekday*/""}
+if(day == 3){dDay = "WEDNESDAY", tDay = /*weekday*/""}
+if(day == 4){dDay = "THURSDAY", tDay = /*weekday*/""}
+if(day == 5){dDay = "FRIDAY", tDay = /*weekday*/""}
+if(day == 6){dDay = "SATURDAY", tDay = /*weekend*/""}
+
+var ctdays = 1 // CUSTOM DAY LABELS e.g. HAPPY BIRTHDAY, MERRY CHRISTMAS, etc. 0 = DISABLED, 1 = ENABLED
+
+if(minimalDisplay == 1){
+ctdays = 0
+}
+
+if(ctdays == 1){
+
+var bjfday = 0
+if(month == 0){bjfday = bjfday + 1}
+if(date == 1){bjfday = bjfday + 1}
+if(bjfday == 2){tDay = "HAPPY NEW YEARS! / HAPPY BIRTHDAY, BRANDON!"}
+
+/*var klhday = 0
+if(month == 10){klhday = klhday + 1}
+if(date == 4){klhday = klhday + 1}
+if(klhday == 2){tDay = "HAPPY BIRTHDAY, KENZIE!"}*/
+
+var cbanvsry = 0
+if(month == 6){cbanvsry = cbanvsry + 1}
+if(date == 1){cbanvsry = cbanvsry + 1}
+if(cbanvsry == 2){tDay = "HAPPY ANNIVERSARY, CATHI & BRIAN!"}
+
+var xmas = 0
+if(month == 11){xmas = xmas + 1}
+if(date == 25){xmas = xmas + 1}
+if(xmas == 2){tDay = "MERRY CHRISTMAS!"}
+
+var cjanvsry = 0
+if(month == 5){cjanvsry = cjanvsry + 1}
+if(date == 21){cjanvsry = cjanvsry + 1}
+if(cjanvsry == 2){tDay = "HAPPY ANNIVERSARY, CHRIS & JEN!"}
+
+var cjfday = 0
+if(month == 5){cjfday = cjfday + 1}
+if(date == 23){cjfday = cjfday + 1}
+if(cjfday == 2){tDay = "HAPPY BIRTHDAY, CHRIS!"}
+
+var jafday = 0
+if(month == 5){jafday = jafday + 1}
+if(date == 19){jafday = jafday + 1}
+if(jafday == 2){tDay = "HAPPY BIRTHDAY, JEN!"}
+
+var guyfnight = 0
+if(month == 10){guyfnight = guyfnight + 1}
+if(date == 5){guyfnight = guyfnight + 1}
+if(guyfnight == 2){tDay = "HAPPY BONFIRE NIGHT!"}
+
+var ftjokes = 0 // FOUR TWENTY ACTIVATED RAVE MODE 0 = DISABLED, 1 = ENABLED
+if(ftjokes == 1){
+var fourtwenty = 0
+if(month == 3){fourtwenty = fourtwenty + 1}
+if(date == 20){fourtwenty = fourtwenty + 1}
+if(fourtwenty == 2){tDay = "420"}
+} else {var fourtwenty = 0}
+}
+
+var hideseconds = 0 // HIDE SECONDS 0 = DISABLED, 1 = ENABLED
+if(hideseconds == 1){dSecs = ""} else {dSecs = dSecs}
+
+var twhr = 0 // TWELVE HOUR TIME 0 = DISABLED, 1 = ENABLED
+if(twhr == 1){
+document.write(apHours + ":" + dMins + dSecs + " " + ampm)} else {document.write(dHours + ":" + dMins + dSecs)}
+document.write("<p/>");
+
+var tDate = 0 // TRADITIONAL DATE 0 = DISABLED, 1 = ENABLED
+if(tDate == 1){document.write(tcMonth + "/" + dDate + "/" + dYear)} else {
+document.write(dDate + "-" + dMonth + "-" + dYear)}
+document.write("<p/>");
+document.write(dDay);
+document.write("<p/>");
+document.write(tDay);
+
+var darkmodeStatus = 0
+
+var darkmode = 1 // DARK MODE 0 = DISABLED, 1 = ENABLED, 2 = AUTO
+if(darkmode == 1){
+document.body.style.backgroundColor = "black"
+document.body.style.color = "white"
+darkmodeStatus = 1
+}
+if(darkmode == 2){
+darkmodeStatus = 1
+if(hours == 0){
+document.body.style.backgroundColor = "black"
+document.body.style.color = "white"
+}
+if(hours == 1){
+document.body.style.backgroundColor = "black"
+document.body.style.color = "white"
+}
+if(hours == 2){
+document.body.style.backgroundColor = "black"
+document.body.style.color = "white"
+}
+if(hours == 3){
+document.body.style.backgroundColor = "black"
+document.body.style.color = "white"
+}
+if(hours == 4){
+document.body.style.backgroundColor = "black"
+document.body.style.color = "white"
+}
+if(hours == 5){
+document.body.style.backgroundColor = "black"
+document.body.style.color = "white"
+}
+if(hours == 6){
+document.body.style.backgroundColor = "black"
+document.body.style.color = "white"
+}
+if(hours == 20){
+document.body.style.backgroundColor = "black"
+document.body.style.color = "white"
+}
+if(hours == 21){
+document.body.style.backgroundColor = "black"
+document.body.style.color = "white"
+}
+if(hours == 22){
+document.body.style.backgroundColor = "black"
+document.body.style.color = "white"
+}
+if(hours == 23){
+document.body.style.backgroundColor = "black"
+document.body.style.color = "white"
+}
+}
+
+var darktext = 0 // DARK TEXT (REQUIRES DARK MODE IS ENABLED) 0 = DISABLED (HIGHER CONTRAST), 1 = ENABLED, 2 = AUTO
+if(darkmodeStatus == 1 && darktext == 1){
+document.body.style.color = "gray"
+}
+if(darkmodeStatus == 1 && darktext == 2){
+if(hours == 0){
+document.body.style.color = "gray"
+}
+if(hours == 1){
+document.body.style.color = "gray"
+}
+if(hours == 2){
+document.body.style.color = "gray"
+}
+if(hours == 3){
+document.body.style.color = "gray"
+}
+if(hours == 4){
+document.body.style.color = "gray"
+}
+if(hours == 5){
+document.body.style.color = "gray"
+}
+if(hours == 21){
+document.body.style.color = "gray"
+}
+if(hours == 22){
+document.body.style.color = "gray"
+}
+if(hours == 23){
+document.body.style.color = "gray"
+}
+}
+
+var ravemode = 0 // RAVE MODE 0 = DISABLED, 1 = ENABLED
+if(ravemode == 1 || fourtwenty == 2){
+if(btSecs == 0){document.body.style.color = "undefined"}
+if(btSecs == 1){document.body.style.color = "#ff0000"}
+if(btSecs == 2){document.body.style.color = "#00ff00"}
+if(btSecs == 3){document.body.style.color = "#0000ff"}
+if(btSecs == 4){document.body.style.color = "#ff0000"}
+if(btSecs == 5){document.body.style.color = "#00ff00"}
+if(btSecs == 6){document.body.style.color = "#0000ff"}
+if(btSecs == 7){document.body.style.color = "#ff0000"}
+if(btSecs == 8){document.body.style.color = "#00ff00"}
+if(btSecs == 9){document.body.style.color = "#0000ff"}
+}
+
+setTimeout(function(){
+   window.location.reload();
+}, 500); // AUTOMATIC PAGE/TIME RELOAD TIME IN MS
+</script>
+</b>
+</p>
+</a>
+</body>
+</html>
